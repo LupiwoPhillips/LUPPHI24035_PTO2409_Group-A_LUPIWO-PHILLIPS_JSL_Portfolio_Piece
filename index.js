@@ -18,7 +18,8 @@ function initializeData() {
 
 // TASK: Get elements from the DOM
 const elements = {
-
+  headerBoardName: document.getElementById('header-board-name'),
+  tasksContainer: document.getElementById('tasks-container'),
 }
 
 let activeBoard = ""

@@ -4,7 +4,6 @@
 export const getTasks = () => {
   const tasks = localStorage.getItem('tasks');
   return tasks ? JSON.parse(tasks) : [];
-  console.log(tasks);
 };
 
 // Simulate saving tasks to localStorage
