@@ -243,16 +243,17 @@ function toggleTheme() {
 
 
 function openEditTaskModal(task) {
-  // Set task details in modal inputs
-  
 
-  // Get button elements from the task modal
+  document.getElementById('edit-task-title-input').value = task.title;
+  document.getElementById('edit-task-desc-input').value = task.description;
+  document.getElementById('edit-select-status').value = task.status;
 
-
-  // Call saveTaskChanges upon click of Save Changes button
- 
-
-  // Delete task using a helper function and close the task modal
+  document.getElementById('save-task-changes-btn').onclick = () => saveTaskChanges(task.id);
+  document.getElementById('delete-task-btn').onclick = () => {
+    deleteTask(task.id);
+    toggleModal(false, elements.editTaskModal);
+    refreshTasksUI();
+  }
 
 
   toggleModal(true, elements.editTaskModal); // Show the edit task modal
