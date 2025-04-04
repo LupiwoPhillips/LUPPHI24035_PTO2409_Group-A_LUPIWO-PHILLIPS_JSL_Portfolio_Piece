@@ -1,7 +1,7 @@
 // TASK: import helper functions from utils
 // TASK: import initialData
 
-import { getTasks, createNewTask } from "./utils/taskFunctions";
+import { getTasks, createNewTask, updateTask, deleteTask } from "./utils/taskFunctions";
 import { initialData } from "./initialData";
 
 /*************************************************************************************************************************************************
@@ -144,6 +144,8 @@ function addTaskToUI(task) {
   taskElement.className = 'task-div';
   taskElement.textContent = task.title; // Modify as needed
   taskElement.setAttribute('data-task-id', task.id);
+
+  taskElement.addEventListener('click',() => openEditTaskModal(task));
   
   tasksContainer.appendChild(taskElement); 
 }
@@ -152,8 +154,8 @@ function addTaskToUI(task) {
 
 function setupEventListeners() {
   // Cancel editing task event listener
-  const cancelEditBtn = document.getElementById('cancel-edit-btn');
-  cancelEditBtn.addEventListener('click', () => toggleModal(false, elements.editTaskModal));
+  document.getElementById('cancel-edit-btn').addEventListener('click', () => toggleModal(false, elements.editTaskModal));
+  cancelEditBtn.getElementById('cancel-add-task-btn').addEventListener('click', () => toggleModal(false));
 
   // Cancel adding new task event listener
   const cancelAddTaskBtn = document.getElementById('cancel-add-task-btn');
@@ -199,10 +201,18 @@ function toggleModal(show, modal = elements.modalWindow) {
 
 function addTask(event) {
   event.preventDefault(); 
+  const title = document.getElementById('title-input').value.trim();
+  const description = document.getElementById('desc-input').value.trim();
+  const status = document.getElementById('select-status').value.trim();
+
+  if(!title || !status) return;
 
   //Assign user input to the task object
     const task = {
-      
+      title,
+      description,
+      status,
+      board: activeBoard,
     };
     const newTask = createNewTask(task);
     if (newTask) {
@@ -216,10 +226,17 @@ function addTask(event) {
 
 
 function toggleSidebar(show) {
+  const sidebar = document.getElementById('side-bar-div');
+  const showBtn = document.getElementById('show-side-bar-btn');
+  sidebar.style.display = show ? 'flex' : 'none';
+  showBtn.style.display = show ? 'none' : 'block';
+  localStorage.setItem('showSideBar', show);
  
 }
 
 function toggleTheme() {
+  const lightThemeEnabled = document.body.classList.toggle('light-theme');
+  localStorage.setItem('light-theme', lightThemeEnabled ? 'enabled' : 'disabled');
  
 }
 
