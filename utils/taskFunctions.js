@@ -35,7 +35,7 @@ export const putTask = (id, updatedTask) => {
   const tasks = getTasks();
   const taskIndex = tasks.findIndex((task) => task.id === id);
   if (taskIndex > -1) {
-    tasks[taskIndex] = updatedTask;
+    tasks[taskIndex] = { ...updatedTask, id};
     saveTasks(tasks);
   }
   return tasks(); // Or better, re-render tasks without reloading
