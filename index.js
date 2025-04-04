@@ -260,16 +260,18 @@ function openEditTaskModal(task) {
 }
 
 function saveTaskChanges(taskId) {
-  // Get new user inputs
-  
-
-  // Create an object with the updated task details
-
-
-  // Update task using a hlper functoin
  
+  const updatedTitle = document.getElementById('edit-task-title-input').value.trim();
+  const updatedDesc = document.getElementById('edit-task-desc-input').value.trim();
+  const updatedStatus = document.getElementById('edit-select-status').value.trim();
 
-  // Close the modal and refresh the UI to reflect the changes
+  const updatedTask = {
+    id: taskId,
+    title: updatedTitle,
+    description: updatedDesc,
+    status: updatedStatus,
+    board: activeBoard,
+  };
 
   refreshTasksUI();
 }
@@ -277,7 +279,8 @@ function saveTaskChanges(taskId) {
 /*************************************************************************************************************************************************/
 
 document.addEventListener('DOMContentLoaded', function() {
-  init(); // init is called after the DOM is fully loaded
+  initialData(); // init is called after the DOM is fully loaded
+  init();
 });
 
 function init() {
